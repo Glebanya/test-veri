@@ -1,0 +1,20 @@
+parameters:
+  workspaces.file: './db/workplaces.csv'
+  students.file: './db/attendance.csv'
+
+services:
+  veri.attendance.calc.command:
+    class: \VeriTest\Commands\CalculateAttendanceCommand
+    arguments: ['@veri.student.repository', '@veri.rate.calculator']
+  veri.distance.counter:
+    class: \VeriTest\EuclideanDistance
+    arguments: []
+  veri.workplace.repository:
+    class: \VeriTest\Repository\WorkplaceRepo sitory
+    arguments: [ '%workspaces.file%' ]
+  veri.student.repository:
+    class: \VeriTest\Repository\StudentRepository
+    arguments: [ '%students.file%' ]
+  veri.rate.calculator:
+    class: \VeriTest\RateCalculator
+    arguments: ['@veri.workplace.repository','@veri.distance.counter']
