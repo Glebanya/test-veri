@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+             "VeriTest\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "*",
+        "symfony/dependency-injection": "^6.0",
+        "symfony/config": "^6.0",
+        "symfony/yaml": "^6.0"
+    }
+}
