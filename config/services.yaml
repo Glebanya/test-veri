@@ -10,7 +10,7 @@ services:
     class: \VeriTest\EuclideanDistance
     arguments: []
   veri.workplace.repository:
-    class: \VeriTest\Repository\WorkplaceRepo sitory
+    class: \VeriTest\Repository\WorkplaceRepository
     arguments: [ '%workspaces.file%' ]
   veri.student.repository:
     class: \VeriTest\Repository\StudentRepository
