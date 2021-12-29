@@ -11,7 +11,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 ADD . /app
 WORKDIR /app
 
-RUN composer install --no-cache && php --define phar.readonly=0 /app/build/generate && chmod 770 /app/app.phar
+RUN composer install --no-cache --no-dev && php --define phar.readonly=0 /app/build/generate && chmod 770 /app/app.phar
 
 FROM php:8.1-cli-alpine
 
