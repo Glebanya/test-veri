@@ -3,3 +3,5 @@ composer.phar
 app.phar
 
 .idea
+
+.phpunit.result.cache
