@@ -11,6 +11,6 @@
         "symfony/yaml": "^6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "9.5.1"
     }
 }
